@@ -1,8 +1,0 @@
-NCSU - > ERA
-
-Life Cycle - > Life Cycle
-Light - > Sun Exposure
-Plant Type -> Plant Type
-Pollinators -> Attracts
-Height -> Dimensions
-Fruit Value, Flower Value -> Showy

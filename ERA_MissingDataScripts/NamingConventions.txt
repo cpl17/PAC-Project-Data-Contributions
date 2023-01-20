@@ -1,5 +1,0 @@
-<Name>_Unedited -> Original, untouched data from scraping
-<Name>_Formatted -> All columns, prettifed excel sheet, dealt with encoding errors
-<Name>_Cleaned -> All columns, formatted according to CNP database
-<Name>_Cleaned_RelvantColumns -> <Name>_Clean but reduced to only the columns in which we are imputing missing data
- 

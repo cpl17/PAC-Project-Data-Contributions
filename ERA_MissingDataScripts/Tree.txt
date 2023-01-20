@@ -1,64 +1,71 @@
+Folder PATH listing for volume OS
+Volume serial number is C0CD-1CF8
 C:.
-â”œâ”€â”€â”€ERA Obs
-â”‚       Alabama.ipynb
-â”‚       UniqueValues.csv
-â”‚
-â”œâ”€â”€â”€Gardenia
-â”‚   â”‚   Explore.ipynb
-â”‚   â”‚   main.py
-â”‚   â”‚   Names.txt
-â”‚   â”‚
-â”‚   â””â”€â”€â”€Output
-â”‚           AllColumns.csv
-â”‚           ERA Missing Column Mapping.txt
-â”‚           GardeniaFullOriginal.csv
-â”‚           GardeniaFullOrignalUnedited.csv
-â”‚           UniqueValues.csv
-â”‚
-â”œâ”€â”€â”€MissouriBotonicalGardens
-â”‚   â”‚   Explore.ipynb
-â”‚   â”‚   Main.py
-â”‚   â”‚
-â”‚   â””â”€â”€â”€Output
-â”‚           AllColumns.csv
-â”‚           ERA Missing Columns Mapping.txt
-â”‚           Matches.txt
-â”‚           MissouriBotanical.csv
-â”‚           UniqueValues.csv
-â”‚
-â”œâ”€â”€â”€NCSU
-â”‚   â”‚   Explore.ipynb
-â”‚   â”‚   main.py
-â”‚   â”‚   read_from_json.py
-â”‚   â”‚
-â”‚   â””â”€â”€â”€Output
-â”‚           AllColumns.csv
-â”‚           ERA Missing Columns Mappings.txt
-â”‚           GC_pairings.txt
-â”‚           Missing_keys.txt
-â”‚           NCSU_Final_Original.csv
-â”‚           NCSU_Final_Unedited.csv
-â”‚           UniqueValues.csv
-â”‚
-â”œâ”€â”€â”€USDAPlants
-â”‚   â”‚   Explore.ipynb
-â”‚   â”‚   Main.py
-â”‚   â”‚
-â”‚   â””â”€â”€â”€Output
-â”‚           AllColumns.csv
-â”‚           ERA Missing Column Mappings .txt
-â”‚           Errors.txt
-â”‚           SearchResults.csv
-â”‚           UniqueValues.csv
-â”‚           USDA_Plants.csv
-â”‚
-â””â”€â”€â”€Wildflower
-    â”‚   Explore.ipynb
-    â”‚   main.py
-    â”‚
-    â””â”€â”€â”€Output
-            AllColumns.csv
-            ERA Missing Column Mappings.txt
-            UniqueValues.csv
-            Wildflower_Full_Formatted.csv
-            Wildflower_Full_Unedited.csv
+³   Tree.txt
+³   
+ÃÄÄÄNotebooks
+³       BuildOutSolution_AL.ipynb
+³       BuildOutSolution_Gardenia.ipynb
+³       BuildOutSolution_MissouriBotanical.ipynb
+³       BuildOutSolution_NCSU.ipynb
+³       BuildOutSolution_USDAPlants.ipynb
+³       Clean_AL.ipynb
+³       Clean_Gardenia.ipynb
+³       Clean_MissouriBotanical.ipynb
+³       Clean_NCSU.ipynb
+³       Clean_USDAPlants.ipynb
+³       Join.ipynb
+³       
+ÃÄÄÄOutput
+³   ³   ERA_Alabama_Cleaned_Updated_1_19.csv
+³   ³   UniqueValues.xlsx
+³   ³   
+³   ÃÄÄÄAllScrapedData_Cleaned
+³   ³       Gardenia_AL.csv
+³   ³       Gardenia_PA.csv
+³   ³       MissouriBotanical_AL.csv
+³   ³       MissouriBotanical_PA.csv
+³   ³       NCSU_AL.csv
+³   ³       NCSU_PA.csv
+³   ³       USDAPlants_AL.csv
+³   ³       Wildflower_AL.csv
+³   ³       Wildflower_AL_Formatted.csv
+³   ³       Wildflower_PA.csv
+³   ³       
+³   ÀÄÄÄAllScrapedData_Original
+³           Gardenia_AL_Formatted.csv
+³           Gardenia_AL_Unedited.csv
+³           Gardenia_PA_Formatted.csv
+³           Gardenia_PA_Unedited.csv
+³           MissouriBotanical_AL_Unedited.csv
+³           MissouriBotanical_PA_Unedited.csv
+³           NCSU_AL_Formatted.csv
+³           NCSU_AL_Unedited.csv
+³           NCSU_PA_Formatted.csv
+³           NCSU_PA_Unedited.csv
+³           USDAPlants_AL_Formatted.csv
+³           USDAPlants_AL_Unedited.csv
+³           Wildflower_AL_Unedited.csv
+³           Wildflower_PA_Unedited.csv
+³           
+ÃÄÄÄRandom
+³       NCSU_GC_pairings.txt
+³       NCSU_Missing_keys.txt
+³       SearchResults.csv
+³       USDAPlants_Errors.txt
+³       
+ÀÄÄÄScripts
+        clean_Gardenia.py
+        clean_MissouriBotanical.py
+        clean_NCSU.py
+        clean_USDAPlants.py
+        clean_Wildflower.py
+        get_unique_values.py
+        join.py
+        main_Gardenia.py
+        main_MissouriBotanical.py
+        main_NCSU.py
+        main_USDAPlants.py
+        main_Wildflower.py
+        utils.py
+        

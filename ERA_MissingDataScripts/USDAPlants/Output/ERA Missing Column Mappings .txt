@@ -1,4 +1,0 @@
-USDA -> ERA
-
-Height, Mature (feet) -> height
-Flower Color -> Flower Color
