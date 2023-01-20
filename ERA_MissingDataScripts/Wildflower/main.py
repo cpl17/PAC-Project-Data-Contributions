@@ -18,7 +18,7 @@ def clean_subheader_values(string):
     return new_string
 
 #Source Data
-full_data = pd.read_excel("./Data/ERA_Alabama.xlsx",sheet_name="All Plants")
+full_data = pd.read_excel("../../Data/ERA_Alabama.xlsx",sheet_name="All Plants")
 
 
 
@@ -110,4 +110,4 @@ for d in labeled_plant_dicts.values(): # you can list as many input dicts as you
         dd[key].append(value)
 
 index = labeled_plant_dicts.keys()
-pd.DataFrame(dd,index=index).to_csv("./Output/WildflowerFull.csv")
+pd.DataFrame(dd,index=index).to_csv("./Output/Wildflower_Unedited.csv")

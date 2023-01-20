@@ -1,0 +1,64 @@
+C:.
+├───ERA Obs
+│       Alabama.ipynb
+│       UniqueValues.csv
+│
+├───Gardenia
+│   │   Explore.ipynb
+│   │   main.py
+│   │   Names.txt
+│   │
+│   └───Output
+│           AllColumns.csv
+│           ERA Missing Column Mapping.txt
+│           GardeniaFullOriginal.csv
+│           GardeniaFullOrignalUnedited.csv
+│           UniqueValues.csv
+│
+├───MissouriBotonicalGardens
+│   │   Explore.ipynb
+│   │   Main.py
+│   │
+│   └───Output
+│           AllColumns.csv
+│           ERA Missing Columns Mapping.txt
+│           Matches.txt
+│           MissouriBotanical.csv
+│           UniqueValues.csv
+│
+├───NCSU
+│   │   Explore.ipynb
+│   │   main.py
+│   │   read_from_json.py
+│   │
+│   └───Output
+│           AllColumns.csv
+│           ERA Missing Columns Mappings.txt
+│           GC_pairings.txt
+│           Missing_keys.txt
+│           NCSU_Final_Original.csv
+│           NCSU_Final_Unedited.csv
+│           UniqueValues.csv
+│
+├───USDAPlants
+│   │   Explore.ipynb
+│   │   Main.py
+│   │
+│   └───Output
+│           AllColumns.csv
+│           ERA Missing Column Mappings .txt
+│           Errors.txt
+│           SearchResults.csv
+│           UniqueValues.csv
+│           USDA_Plants.csv
+│
+└───Wildflower
+    │   Explore.ipynb
+    │   main.py
+    │
+    └───Output
+            AllColumns.csv
+            ERA Missing Column Mappings.txt
+            UniqueValues.csv
+            Wildflower_Full_Formatted.csv
+            Wildflower_Full_Unedited.csv

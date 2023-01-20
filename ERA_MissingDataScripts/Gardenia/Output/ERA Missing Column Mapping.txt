@@ -1,0 +1,9 @@
+New - ERA
+
+Plant Type -> Plant Type, Life Cyle
+Exposure -> Sun Exposure
+Height -> Height
+Characteristics -> Showy
+?Attract -> Pollinators
+
+
