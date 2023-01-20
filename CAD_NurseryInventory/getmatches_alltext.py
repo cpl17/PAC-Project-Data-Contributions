@@ -4,7 +4,7 @@ import os
 #The source database
 era_al = pd.read_excel("../Data/ERA_Alabama.xlsx",sheet_name="All Plants")
 era_al = era_al[["Scientific Name","Common Name","USDA Symbol"]]
-
+era_al_copy = era_al.copy()
 
 for col in era_al:
     era_al[col] = era_al[col].str.lower()
@@ -66,6 +66,8 @@ mapping = nursery_info.set_index("Nursery").to_dict()["Nursery URL"] #Nursery to
 
 local_long["URL"] = local_long["Nursery"].map(mapping)
 local_long = local_long[["USDA Symbol","Nursery","URL"]]
+local_long.columns = ["USDA Symbol","Source","URL"]
+local_long["USDA Symbol"] = local_long["USDA Symbol"].str.upper()
 local_long.to_csv("./Output/Local_Long.csv")
 
 ### Output: Aggegrate along symbol to get SYMBOL URLS COUNT df ###
@@ -74,9 +76,13 @@ df["URL"] = df["Nursery"].map(mapping)
 df = df[["USDA Symbol","Nursery","URL"]]
 
 f = lambda x: ', '.join(map(str, set(x)))
-local_agg = df.groupby("USDA Symbol").agg({"URL":[f,len]})
+local_agg = df.groupby("USDA Symbol").agg({"URL":[f,len],"Nursery":f})
 local_agg.reset_index(inplace=True)
-local_agg.columns = ["USDA Symbol","URLS","COUNT"]
+local_agg.columns = ["USDA Symbol","URLS","COUNT","Source"]
+local_agg["USDA Symbol"] = local_agg["USDA Symbol"].str.upper()
+local_agg = pd.merge(local_agg,era_al_copy,on="USDA Symbol",how="left")
+local_agg["Common Name"] = local_agg["Common Name"].str.title()
+local_agg["String"] = [f"{row['Common Name']} ({row['Scientific Name']}): {row['Source']}" for _,row in local_agg.iterrows()]
 local_agg.to_csv("./Output/Local_Agg.csv")
 
 

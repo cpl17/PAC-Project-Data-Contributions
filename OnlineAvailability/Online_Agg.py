@@ -13,7 +13,7 @@ f = lambda x: ', '.join(map(str, set(x)))
 online_agg = data.groupby("USDA Symbol").agg({"Root":[f,len],"Web":f})
 
 online_agg.reset_index(inplace=True)
-online_agg.columns = ["USDA Symbol","Root","COUNT","Web"]
+online_agg.columns = ["USDA Symbol","Root","Count","Web"]
 
 metadata = metadata[["USDA Symbol","Scientific Name","Common Name"]]
 metadata.columns = ["USDA Symbol","Scientific Name","Common Name"]
