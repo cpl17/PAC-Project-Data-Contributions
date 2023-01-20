@@ -1,6 +1,7 @@
 
 # # Imports and Data
 import pandas as pd
+import numpy as np
 
 
 STATE = "PA"
@@ -13,13 +14,41 @@ FORMAT_OR_UNEDITED = "Unedited"
 
 source_data = pd.read_excel(ERA_SOURCE_DIRECTORY + f"\ERA_{STATE}.xlsx",sheet_name="All Plants")
 data = pd.read_csv(WEBDATA_SOURCE_DIRECTORY + f"/{NURSERY}_{STATE}_{FORMAT_OR_UNEDITED}.csv",index_col=0)
-relevant_columns = ["Bloom Time","Bloom Color", "Soil Moisture","Light Requirement","Size Class"]
+relevant_columns = ["Bloom Time","Bloom Color", "Soil Moisture","Light Requirement","Size Notes"]
 data= data[relevant_columns]
 
 
 # Height 
+def determine_height(cell_value):
+    if isinstance(cell_value,float):
+        return cell_value
 
-data["Height (feet)"] = data["Size Class"].apply(lambda x: x.split()[0].strip().replace(" ft.","").replace("-","–") if not isinstance(x,float) else x)
+    x = cell_value.lower().strip().split("up to about ")[-1]
+    if "feet" in x:
+        if "-" in str(x):
+            return np.nan
+        return_value =  str(x.split(" ")[0])
+    elif "inches" in x:
+        try:
+            x = (int(x.split(" ")[0]))/12
+        except:
+            return np.nan
+
+        if "-" in str(x):
+            return np.nan
+
+        return_value = str(round(x,0))
+    else:
+        return np.nan
+    
+    try: 
+        return int(return_value)
+    except:
+        return np.nan
+    
+
+# data["Height (feet)"] = data["Size Class"].apply(lambda x: x.split()[0].strip().replace(" ft.","").replace("-","–") if not isinstance(x,float) else x)
+data["Height (feet)"] = data["Size Notes"].apply(determine_height)
 
 # ## Bloom Time -> Flowering Months
 
@@ -71,7 +100,7 @@ data.rename({"Light Requirement":"Sun Exposure"},axis=1,inplace=True)
 
 # Lookup Scientific Name
 
-data.drop(["Bloom Time","Bloom Color","Size Class"],axis=1,inplace=True)
+data.drop(["Bloom Time","Bloom Color","Size Notes"],axis=1,inplace=True)
 cols = data.columns
 data = data.reset_index()
 data.columns = ["USDA Symbol"] + cols.to_list()
